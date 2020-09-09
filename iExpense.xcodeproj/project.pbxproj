@@ -13,6 +13,7 @@
 		5D80BE9C25041D88005EC0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D80BE9B25041D88005EC0D9 /* Assets.xcassets */; };
 		5D80BE9F25041D88005EC0D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D80BE9E25041D88005EC0D9 /* Preview Assets.xcassets */; };
 		5D80BEA225041D88005EC0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D80BEA025041D88005EC0D9 /* LaunchScreen.storyboard */; };
+		5DB57AAE2509832C00FE5B4F /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB57AAD2509832C00FE5B4F /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5D80BE9E25041D88005EC0D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D80BEA125041D88005EC0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D80BEA325041D88005EC0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DB57AAD2509832C00FE5B4F /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		5D80BE9425041D86005EC0D9 /* iExpense */ = {
 			isa = PBXGroup;
 			children = (
+				5DB57AAD2509832C00FE5B4F /* AddView.swift */,
 				5D80BE9525041D86005EC0D9 /* AppDelegate.swift */,
 				5D80BE9725041D86005EC0D9 /* SceneDelegate.swift */,
 				5D80BE9925041D86005EC0D9 /* ContentView.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB57AAE2509832C00FE5B4F /* AddView.swift in Sources */,
 				5D80BE9625041D86005EC0D9 /* AppDelegate.swift in Sources */,
 				5D80BE9825041D86005EC0D9 /* SceneDelegate.swift in Sources */,
 				5D80BE9A25041D86005EC0D9 /* ContentView.swift in Sources */,
