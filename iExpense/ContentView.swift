@@ -15,6 +15,25 @@ struct ExpenseItem: Identifiable, Codable {
     let amount: Int
 }
 
+struct Title: ViewModifier {
+    var num: Int
+    
+    func body(content: Content) -> some View {
+        if num < 10 {
+            return content.foregroundColor(.green)
+        }
+        else if num < 50 {
+            return content.foregroundColor(.yellow)
+        }
+        else if num > 100 {
+            return content.foregroundColor(.red)
+        }
+        else {
+            return content.foregroundColor(.black)
+        }
+    }
+}
+
 class Expenses: ObservableObject {
     init() {
         if let items = UserDefaults.standard.data(forKey: "Items") {
@@ -52,26 +71,30 @@ struct ContentView: View {
                         }
 
                         Spacer()
-                        Text("$\(item.amount)")
+                        Text("$\(item.amount)").modifier(Title(num: item.amount))
                     }
                 }
                 .onDelete(perform: removeItems)
             }
             .navigationBarTitle("iExpense")
             .navigationBarItems(trailing:
-                Button(action: {
-                   self.showingAddExpense = true
-                }) {
-                    Image(systemName: "plus")
+                HStack {
+                    EditButton().padding(20)
+                    Button(action: {
+                        self.showingAddExpense = true
+                    }) {
+                        Text("Add entry")
+                    }
                 }
             )
+
         }.sheet(isPresented: $showingAddExpense) {
             AddView(expenses: self.expenses)
         }
     }
     func removeItems(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
-    }
+    }    
 }
 
 struct ContentView_Previews: PreviewProvider {
